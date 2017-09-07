@@ -13,7 +13,7 @@
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "jetwaves\\route-to-controller\\": "src/"
+            "Jetwaves\\RouteToController\\": "src/"
         }
     }
 }
