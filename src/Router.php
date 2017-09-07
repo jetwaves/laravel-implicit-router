@@ -324,14 +324,9 @@ class Router
      */
     public function controller($uri, $controller, $names = [])
     {
-//        Log::info('     '.__method__.'() line:'.__line__.'     $uri                  = '.print_r($uri, true));
-//        Log::info('     '.__method__.'() line:'.__line__.'     $controller      = '.print_r($controller, true));
         $arr = explode('\\', $controller);
         $controllerClassName = $arr[  sizeof($arr) -1  ];
-//        Log::info('     '.__method__.'() line:'.__line__.'     $controllerClassName    2  = '.print_r($controllerClassName, true));
         $routable = (new ControllerInspector)->getRoutable($this->addGroupNamespace($controller), $uri);
-//        Log::info('     '.__method__.'() line:'.__line__.'     $routable  = '.print_r($routable, true));
-
         foreach ($routable as $method => $routes) {
             if ($method == 'getMethodProperties') {
                 continue;
@@ -339,26 +334,22 @@ class Router
 
             foreach ($routes as $route) {
 //  original code
-//                Log::info('     '.__method__.'() line:'.__line__.'     $method      = '.print_r($method, true));
-//                Log::info('     '.__method__.'() line:'.__line__.'     $route           = '.print_r($route, true));
 //                $this->{$route['verb']}($route['uri'], [
 //                        'uses' => $controller.'@'.$method,
 //                        'as' => array_get($names, $method)
 //                ]);
 //                Route::{$route['verb']}( $route['uri'] ,  "{$controller}@{$method}" );
 
-
 // should add middleware support later
                 Route::{$route['verb']}( $route['uri'] ,  "{$controllerClassName}@{$method}" );
 
-// middleware support not working like following
+// middleware support not working as following
 //                Route::{$route['verb']}( $route['uri'] ,  [
 //                    'uses' => $controller.'@'.$method,
 //                    'as' => array_get($names, $method)
 //                ]);
             }
         }
-        Log::info('     '.__method__.'() line:'.__line__.'     $routes  = '.print_r($this, true));
     }
 
     /**
