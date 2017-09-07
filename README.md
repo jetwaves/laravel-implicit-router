@@ -17,7 +17,7 @@ But some projects have thousands of routing rules to declare.
 
 ### Solution:
 1. run command:
-    composer require jetwaves/route-to-controller dev-master
+        composer require jetwaves/route-to-controller dev-master
 2. in your api.php or web.php in  routes,  add this following lines  (1).
 
         <?php
