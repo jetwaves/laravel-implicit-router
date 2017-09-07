@@ -19,16 +19,19 @@ But some projects have thousands of routing rules to declare.
 1. run command:
     composer require jetwaves/route-to-controller dev-master
 2. in your api.php or web.php in  routes,  add this following lines  (1).
+
         <?php
         $api = app('Jetwaves\RouteToController\Router');
         $api->controller('URI_PREFIX', 'App\Http\Controllers\TestController');
 3. in your App/Http/Controllers/TestController.php,   add a function like
+
         <?php
         public function getShowMeTheMoney(Request $req){
             return '10000 gold';
         }
-4. then we can access this controller by   http://hostname/URI_PREFIX/show-me-the-money and get the response
-        10000 gold          in your browser.  Just like the implicit controller routing of Laravel 5.1 at old time.
+4. then we can access this controller by   http://hostname/URI_PREFIX/show-me-the-money and get the following response in your browser. Just like the implicit controller routing of Laravel 5.1 at old time. 
+    
+        10000 gold          
 5. All Http method keywords are allowed to be the prefix of Camel Type function name to serve correspondent http methods.
 6. When function does not exists, you'll get a 404 of laravel itself.
 7. Declare explicit routes in the original way. (nothing changed)
