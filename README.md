@@ -42,7 +42,7 @@ code snippet (1) could be used in a closure of middlewares.
 
     <?php
     Route::middleware(['test'])->group(function () {
-    $api = app('Jetwaves\RouteToController\Router');
+        $api = app('Jetwaves\RouteToController\Router');
         $api->controller('URI_PREFIX', 'App\Http\Controllers\TestController');
     });
 
