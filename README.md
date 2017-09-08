@@ -47,16 +47,19 @@ But some projects have thousands of routing rules to declare.
 ### Middleware support:
 code snippet (1) could be used in a closure of middlewares.
 
-    <?php
-    Route::middleware(['test'])->group(function () {
-        $api = app('Jetwaves\RouteToController\Router');
-        $api->controller('URI_PREFIX', 'App\Http\Controllers\TestController');
-    });
+```php
+Route::middleware(['test'])->group(function () {
+    $api = app('Jetwaves\RouteToController\Router');
+    $api->controller('URI_PREFIX', 'App\Http\Controllers\TestController');
+});
+```
 
 
 when the 'test' middleware do  
 
-    echo 'starcraft tricks :'
+```php
+echo 'starcraft tricks :'
+```
 and you access http://hostname/URI_PREFIX/show-me-the-money,  you'il get 
 
     starcraft tricks : 10000 gold
