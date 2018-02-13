@@ -1,6 +1,6 @@
 {
-    "name": "jetwaves/route-to-controller",
-    "description": "A simple Implicit Controller Router for Laravel whose version >= 5.2 ( 5.5 tested ) ",
+    "name": "jetwaves/laravel-implicit-router",
+    "description": "A simple Implicit Router/Controller Router for Laravel whose version >= 5.2 ( 5.5 tested ) ",
     "type": "sdk",
     "require": {},
     "license": "MIT",
@@ -13,7 +13,7 @@
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "Jetwaves\\RouteToController\\": "src/"
+            "Jetwaves\\LaravelImplicitRouter\\": "src/"
         }
     }
 }

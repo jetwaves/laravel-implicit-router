@@ -1,6 +1,6 @@
 <?php
 
-namespace Jetwaves\RouteToController;
+namespace Jetwaves\LaravelImplicitRouter;
 
 use ReflectionClass;
 use ReflectionMethod;

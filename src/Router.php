@@ -1,10 +1,10 @@
 <?php
 
-namespace Jetwaves\RouteToController;
+namespace Jetwaves\LaravelImplicitRouter;
 
 use Closure;
 use RuntimeException;
-use Jetwaves\RouteToController\ControllerInspector;
+use Jetwaves\LaravelImplicitRouter\ControllerInspector;
 
 use Illuminate\Support\Facades\Log;
 use Route;
