@@ -1,5 +1,5 @@
-# route-to-controller
-A simple Implicit Controller Router for Laravel whose version >= 5.2 ( 5.5 tested )
+# laravel-implicit-router
+A simple Implicit Implicit Router/ Controller Router for Laravel whose version >= 5.2 ( 5.5 tested )
 
 
 
@@ -19,13 +19,13 @@ But some projects have thousands of routing rules to declare.
 1. run command:
 
    ```php
-    composer require jetwaves/route-to-controller dev-master
+    composer require jetwaves/laravel-implicit-router
    ```
 2. in your api.php or web.php in  routes,  add this following lines  (1).
 
    ```php
     <?php
-    $api = app('Jetwaves\RouteToController\Router');
+    $api = app('Jetwaves\LaravelImplicitRouter\Router');
     $api->controller('URI_PREFIX', 'App\Http\Controllers\TestController');
    ```
 3. in your App/Http/Controllers/TestController.php,   add a function like
@@ -49,7 +49,7 @@ code snippet (1) could be used in a closure of middlewares.
 
 ```php
 Route::middleware(['test'])->group(function () {
-    $api = app('Jetwaves\RouteToController\Router');
+    $api = app('Jetwaves\LaravelImplicitRouter\Router');
     $api->controller('URI_PREFIX', 'App\Http\Controllers\TestController');
 });
 ```
@@ -73,5 +73,5 @@ in browser.
 ## TODO:
 1. Support some frequently used 'native' middleware declarations,  in the line of route declaration.
 2. Beautify the php source code and this readme file.
-3. Test if it's functional for lumen.
+3. Make it functional for lumen.
 4. Show me your stars  8-D  .
